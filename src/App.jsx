@@ -7,12 +7,15 @@ import Wishlist from './pages/Wishlist'
 import PageNotFound from './pages/PageNotFound'
 import Cart from './pages/Cart'
 
+import Footer from './Componenets/Footer'
+
+
 function App() {
-  // const [count, setCount] = useState(0)
+  
 
   return (
     <>
-     
+   
       <Routes>
         <Route path='/' element={<Products/>} />
           <Route path='/products/:id' element={<View/>} />
@@ -20,9 +23,11 @@ function App() {
             <Route path='/Wishlist' element={<Wishlist/>} />
               <Route path='/*' element={<PageNotFound/>} />
 
+            
+
 
       </Routes>
-             
+             <Footer/>  
   
     </>
   )
