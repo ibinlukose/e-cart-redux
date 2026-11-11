@@ -8,6 +8,7 @@ const wishlistSlice = createSlice({
         addToWishlist:(state,action)=>{
             state.push(action.payload)
         },
+        // remove wishlist - wishlist component - product id
         removeWishlistItem:(state,action)=>{
             return state.filter(item=>item.id!=action.payload)
         }

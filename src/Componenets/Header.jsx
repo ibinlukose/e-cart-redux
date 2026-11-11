@@ -18,6 +18,7 @@ import { useDispatch, useSelector } from 'react-redux';
 function Header({insideProduct}) {
   const userWishlist = useSelector(state=>state.wishlistReducer)
   const dispatch = useDispatch()
+  const userCart = useSelector(state=>state.cartReducer)
   return (
  <Navbar expand="lg" className="bg-primary fixed-top">
       <Container>
@@ -34,7 +35,7 @@ function Header({insideProduct}) {
   className='btn btn-danger me-2' />  wishlist <Badge pill bg="secondary">{userWishlist?.length}</Badge> </Link>
 
   <Link to={'/Cart'} className='text-light text-decoration-none fw-bold ms-5' ><FontAwesomeIcon icon={faCartPlus} 
-  className='btn btn-success me-2' />  cart <Badge pill bg="secondary">10</Badge> </Link>
+  className='btn btn-success me-2' />  cart <Badge pill bg="secondary">{userCart?.length}</Badge> </Link>
 
 
           </Nav>
